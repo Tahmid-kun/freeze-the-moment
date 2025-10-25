@@ -245,19 +245,19 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-// ==================== MESSENGER LINK TRACKING (Optional Analytics) ====================
-const messengerLinks = document.querySelectorAll('a[href*="m.me"]');
+// ==================== WHATSAPP LINK TRACKING (Optional Analytics) ====================
+const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
 
-messengerLinks.forEach((link) => {
+whatsappLinks.forEach((link) => {
   link.addEventListener("click", () => {
     // You can add analytics tracking here
-    console.log("Messenger link clicked:", link.href);
+    console.log("WhatsApp link clicked:", link.href);
 
     // Example: Send to Google Analytics if available
     if (typeof gtag !== "undefined") {
-      gtag("event", "messenger_click", {
+      gtag("event", "whatsapp_click", {
         event_category: "engagement",
-        event_label: "Order on Messenger",
+        event_label: "Order on WhatsApp",
       });
     }
   });
@@ -295,6 +295,6 @@ console.log(
 );
 console.log("%cWebsite developed with ❤️", "font-size: 14px; color: #666;");
 console.log(
-  "%cFor inquiries, contact us on Messenger!",
-  "font-size: 12px; color: #0084ff;"
+  "%cFor inquiries, contact us on WhatsApp!",
+  "font-size: 12px; color: #25D366;"
 );
